@@ -61,7 +61,7 @@ def get_hf_llm(repo_id, debug_mode):
                 break
 
     # Third stage: GPU confirm
-    if confirm_action("Use GPU? (Large models might crash on GPU, but will run more quickly)"):
+    if confirm_action("Use GPU? (Will run faster, but will crash if model won't fit in the available VRAM of your GPU)"):
       n_gpu_layers = -1
     else:
       n_gpu_layers = 0
